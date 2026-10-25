@@ -1,0 +1,12 @@
+{"id": "ssm-vs-transformers", "question": "How do state space models such as Mamba compare with transformers for long-sequence modeling?"}
+{"id": "llm-hallucination", "question": "What are the main techniques for reducing hallucinations in large language models?"}
+{"id": "peft", "question": "Which parameter-efficient fine-tuning methods work best for large language models, and what are their trade-offs?"}
+{"id": "rag-evaluation", "question": "How are retrieval-augmented generation systems evaluated?"}
+{"id": "agent-evaluation", "question": "How are LLM-based autonomous agents evaluated?"}
+{"id": "moe-routing", "question": "How does mixture-of-experts routing work in large language models, and what are its main challenges?"}
+{"id": "fast-diffusion", "question": "Which methods make diffusion models generate images faster?"}
+{"id": "federated-non-iid", "question": "How can federated learning handle non-IID data across clients?"}
+{"id": "ai-text-detection", "question": "What are the current approaches to detecting machine-generated text?"}
+{"id": "gnn-oversmoothing", "question": "How do graph neural networks deal with over-smoothing?"}
+{"id": "small-model-reasoning", "question": "Which techniques improve the reasoning ability of small language models?"}
+{"id": "ts-foundation-models", "question": "How well do foundation models perform on time-series forecasting?"}

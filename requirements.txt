@@ -1,0 +1,3 @@
+# For platforms that install from requirements.txt (e.g. Streamlit Community Cloud).
+# Locally, prefer: pip install -e ".[app,mcp,dev]"
+.[app]

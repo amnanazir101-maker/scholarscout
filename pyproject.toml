@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scholarscout"
+version = "0.1.0"
+description = "Multi-agent research assistant that finds papers, writes a cited literature review and fact-checks every citation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Amna Nazir" }]
+keywords = ["multi-agent", "langgraph", "rag", "gemini", "claude", "literature-review", "mcp"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "google-genai>=2.30,<3",
+    "anthropic>=1.17,<2",
+    "langgraph>=1.2,<2",
+    "pydantic>=2.7",
+    "httpx>=0.27",
+    "numpy>=1.26",
+    "qdrant-client>=1.12",
+    "fastembed>=0.5",
+    "pypdf>=5.0",
+    "python-dotenv>=1.0",
+    "rich>=13",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.40"]
+mcp = ["mcp>=2.0,<3"]
+dev = ["pytest>=8", "ruff==0.17.2"]  # ruff pinned so CI formats exactly like local runs
+
+[project.urls]
+Homepage = "https://github.com/amnanazir101-maker/scholarscout"
+Issues = "https://github.com/amnanazir101-maker/scholarscout/issues"
+
+[project.scripts]
+scholarscout = "scholarscout.cli:main"
+scholarscout-mcp = "scholarscout.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["SIM905"]  # "a b c".split() keeps word lists compact
