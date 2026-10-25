@@ -1,4 +1,4 @@
-# ScholarScout 🔭
+# ScholarScout 
 
 **A multi-agent research assistant that reads the papers and fact-checks its own citations.**
 
